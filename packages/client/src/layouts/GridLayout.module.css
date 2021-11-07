@@ -1,0 +1,17 @@
+.apartments {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (min-width: 830px) {
+  .grid {
+    justify-content: space-between;
+    margin: 0 8px;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@cfrp/db",
+  "version": "1.0.0",
+  "devDependencies": {
+    "prisma": "^3.4.1"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.4.1"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "generate": "prisma generate --schema ./schema.prisma",
+    "studio": "prisma studio --schema ./schema.prisma"
+  }
+}

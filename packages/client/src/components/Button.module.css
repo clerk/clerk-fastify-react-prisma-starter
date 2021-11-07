@@ -1,0 +1,30 @@
+.button {
+  font-size: 1rem;
+  height: 36px;
+  padding: 0 24px;
+  border-color: #4979ab;
+  color: #4979ab;
+  background: transparent;
+
+  align-items: center;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f3f7fc;
+}
+
+.naked {
+  border: none;
+  padding: 0 6px;
+}

@@ -1,0 +1,86 @@
+.card {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgb(39 54 86 / 14%), 0 1px 10px rgb(39 54 86 / 20%);
+  margin-bottom: 32px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  width: 100%;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.imageContainer {
+  height: 350px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.amenities {
+  display: flex;
+  justify-content: flex-start;
+  line-height: 1.4rem;
+  margin-bottom: 16px;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.priceContainer {
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+}
+
+.amount {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.actionButton {
+  border: 1px solid;
+  border-radius: 36px;
+  font-size: 0.857rem;
+  line-height: 1.429rem;
+  padding: 4px 12px;
+  background-color: #f3f7fc;
+  border-color: #d6e6f2;
+  color: #273656;
+}
+
+.claimed {
+  color: white;
+  background-color: #eb594b;
+  font-weight: 600;
+}
+
+.forego {
+  background-color: #f4cb7f;
+}
+
+@media (min-width: 830px) {
+  .card {
+    width: calc(50% - 8px);
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}

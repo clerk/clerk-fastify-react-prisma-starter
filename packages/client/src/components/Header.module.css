@@ -1,0 +1,43 @@
+.header {
+  padding: 0 24px;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 64px;
+  justify-content: space-between;
+  border-bottom: 1px solid #e3dede;
+  margin-bottom: 48px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+}
+
+.logoRowTitle {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  display: none;
+}
+
+.authButtons button:nth-of-type(1) {
+  margin-right: 6px;
+}
+
+.separator {
+  width: 1px;
+  background-color: #e3dede;
+  height: 24px;
+  margin: 0 14px 0 16px;
+}
+
+.logoRowLink {
+  font-size: 1rem;
+}
+
+@media (min-width: 830px) {
+  .logoRowTitle {
+    display: block;
+  }
+}

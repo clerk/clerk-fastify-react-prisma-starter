@@ -1,0 +1,19 @@
+.footer {
+  width: 100%;
+  padding: 24px;
+  border-top: 1px solid #e3dede;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.contents {
+  max-width: 1080px;
+}
+
+.footerTitle {
+  opacity: 0.6;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}

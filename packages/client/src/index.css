@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Quicksand";
+  src: local("Quicksand"),
+    url("./assets/fonts/Quicksand-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Common */
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.01rem;
+  line-height: 1.571rem;
+  color: #273656;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font-family: "Quicksand";
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}

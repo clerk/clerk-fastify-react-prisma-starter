@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "clerk-fastify-react-prisma-starter",
+  "workspaces": [
+    "packages/**/*"
+  ],
+  "scripts": {
+    "server:dev": "nodemon --watch './packages/server/**/*.ts' --exec 'ts-node' ./packages/server/src/index.ts",
+    "client:dev": "yarn workspace @cfrp/client start",
+    "prisma:schema": "yarn workspace @cfrp/db generate",
+    "prisma:studio": "yarn workspace @cfrp/db studio"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.4",
+    "nodemon": "^2.0.14",
+    "ts-node": "^10.4.0"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {}
+}

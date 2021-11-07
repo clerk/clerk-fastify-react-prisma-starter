@@ -1,0 +1,17 @@
+{
+    "name": "@cfrp/server",
+    "version": "1.0.0",
+    "dependencies": {
+        "@cfrp/db": "1.0.0",
+        "@clerk/clerk-sdk-node": "^2.1.0",
+        "dotenv": "^10.0.0",
+        "fastify": "^3.22.1",
+        "fastify-cors": "^6.0.2",
+        "fastify-env": "^2.1.1",
+        "fastify-plugin": "^3.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.11.6"
+    },
+    "main": "./src/index.ts"
+}
