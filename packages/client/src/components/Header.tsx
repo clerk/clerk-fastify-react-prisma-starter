@@ -28,7 +28,7 @@ export const Header = withClerk(() => {
             <Button handleClick={clerk.openSignUp}>Sign up</Button>
           </SignedOut>
           <SignedIn>
-            <Button handleClick={clerk.signOut} naked>
+            <Button handleClick={() => clerk.signOut()} naked>
               Logout
             </Button>
             <Button handleClick={clerk.redirectToUserProfile}>
