@@ -11,8 +11,10 @@ export const Header = withClerk(() => {
     <div>
       <div className={styles.header}>
         <div className={styles.logoRow}>
-          <ClerkLogo />
-          <span className={styles.logoRowTitle}>ClerkApartments</span>
+          <Link to="/" className={styles.logoLink}>
+            <ClerkLogo />
+            <span className={styles.logoRowTitle}>ClerkApartments</span>
+          </Link>
           <SignedIn>
             <div className={styles.separator}></div>
             <Link to="/my-apartments">

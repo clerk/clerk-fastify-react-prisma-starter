@@ -9,6 +9,11 @@
   margin-bottom: 48px;
 }
 
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
 .logoRow {
   display: flex;
   align-items: center;
