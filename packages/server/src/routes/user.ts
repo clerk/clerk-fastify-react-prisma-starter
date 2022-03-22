@@ -2,15 +2,16 @@ import { FastifyInstance, FastifyPluginAsync } from "fastify";
 import fp from "fastify-plugin";
 import { getUserApartments, getApartmentById, updateApartment } from "@cfrp/db";
 import { clerkPreHandler } from "../auth/clerkHandler";
+import { WithAuthProp } from "@clerk/clerk-sdk-node";
+import { FastifyRequest } from "fastify";
 
 const UserRoutes: FastifyPluginAsync = async (server: FastifyInstance) => {
   server.get(
     "/user/apartments", // @ts-ignore
     { preHandler: clerkPreHandler() },
-    async (request, reply) => {
-      const userId = request.session?.userId as string;
-      const userApartments = await getUserApartments(userId);
-
+    async (request: WithAuthProp<FastifyRequest<any>>, reply) => {
+      const {userId} = request.auth;
+      const userApartments = await getUserApartments(userId as string);
       return reply.send(userApartments);
     }
   );
@@ -18,8 +19,8 @@ const UserRoutes: FastifyPluginAsync = async (server: FastifyInstance) => {
   server.post(
     "/user/forego", // @ts-ignore
     { preHandler: clerkPreHandler() },
-    async (request, reply) => {
-      const userId = request.session?.userId as string;
+    async (request: WithAuthProp<FastifyRequest<any>>, reply) => {
+      const {userId} = request.auth;
       const apartmentId = JSON.parse(request.body as string).apartmentId;
       const apartmentToForego = await getApartmentById(apartmentId);
 

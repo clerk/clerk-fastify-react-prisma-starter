@@ -11,7 +11,7 @@
     "prisma:studio": "yarn workspace @cfrp/db studio"
   },
   "devDependencies": {
-    "typescript": "^4.4.4",
+    "typescript": "^4.6.2",
     "nodemon": "^2.0.14",
     "ts-node": "^10.4.0"
   },

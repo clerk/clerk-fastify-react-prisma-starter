@@ -37,18 +37,7 @@ export function ApartmentCard({
             <ClaimApartment
               claimApartment={claimApartment}
               claimedBy={apartment.claimedBy}
-            />
-            // <button
-            //   disabled={Boolean(apartment.claimedBy)}
-            //   className={clsx(
-            //     styles.actionButton,
-            //     apartment.claimedBy && styles.claimed
-            //   )}
-            //   onClick={claimApartment}
-            // >
-            //   {apartment.claimedBy ? "Claimed" : "Claim"}
-            // </button>
-          )}
+            />)}
           {foregoApartment && (
             <button
               className={clsx(styles.actionButton, styles.forego)}

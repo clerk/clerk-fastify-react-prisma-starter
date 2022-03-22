@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "dependencies": {
         "@cfrp/db": "1.0.0",
-        "@clerk/clerk-sdk-node": "^2.1.0",
+        "@clerk/clerk-sdk-node": "next",
         "dotenv": "^10.0.0",
         "fastify": "^3.22.1",
         "fastify-cors": "^6.0.2",
