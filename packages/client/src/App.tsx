@@ -7,12 +7,15 @@ import { MyApartments } from "./components/MyApartments";
 import { Footer } from "./components/Footer";
 
 // Get the Frontend API from the environment
-const frontendApi = process.env.REACT_APP_CLERK_FRONTEND_API;
+const publishableKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
 
 function App() {
   const navigate = useNavigate();
   return (
-    <ClerkProvider frontendApi={frontendApi} navigate={(to) => navigate(to)}>
+    <ClerkProvider
+      publishableKey={publishableKey}
+      navigate={(to) => navigate(to)}
+    >
       <Header />
       <Routes>
         <Route path="/my-apartments" element={<MyApartments />}></Route>
