@@ -12,8 +12,7 @@ const ApartmentRoutes: FastifyPluginAsync = async (server: FastifyInstance) => {
   server.post(
     "/apartments/claim",
     {
-      // @ts-ignore
-      preHandler: clerkPreHandler(),
+      preHandler: clerkPreHandler,
     },
     async (request, reply) => {
       const userId = request.session?.userId as string;
