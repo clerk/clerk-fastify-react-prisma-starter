@@ -3,12 +3,12 @@
     "version": "1.0.0",
     "dependencies": {
         "@cfrp/db": "1.0.0",
-        "@clerk/clerk-sdk-node": "next",
-        "dotenv": "^10.0.0",
-        "fastify": "^3.22.1",
-        "fastify-cors": "^6.0.2",
-        "fastify-env": "^2.1.1",
-        "fastify-plugin": "^3.0.0"
+        "@clerk/clerk-sdk-node": "latest",
+        "dotenv": "^16.0.3",
+        "fastify": "^4.12.0",
+        "@fastify/cors": "^8.0.0",
+        "fastify-env": "^2.2.0",
+        "fastify-plugin": "^4.5.0"
     },
     "devDependencies": {
         "@types/node": "^16.11.6"
