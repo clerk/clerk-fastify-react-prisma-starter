@@ -3,28 +3,19 @@ dotenv.config();
 
 import fastify from "fastify";
 import fastifyCors from "@fastify/cors";
+import {clerkPlugin} from "@clerk/fastify";
 import ApartmentRoutes from "./routes/apartments";
 import UserRoutes from "./routes/user";
-
-import type { Session } from "@clerk/clerk-sdk-node";
-
-declare module "fastify" {
-  export interface FastifyRequest {
-    session?: Session;
-  }
-}
 
 const server = fastify();
 
 const start = async () => {
   try {
+    await server.register(clerkPlugin);
     await server.register(fastifyCors, {
       origin: process.env.CLIENT_ORIGIN,
       allowedHeaders: ["Authorization"],
     });
-
-    // Decorate request with a 'session' property
-    server.decorateRequest("session", undefined);
 
     await server.register(ApartmentRoutes);
     await server.register(UserRoutes);
