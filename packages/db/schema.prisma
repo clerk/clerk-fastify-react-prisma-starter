@@ -9,11 +9,11 @@ generator client {
 }
 
 model Apartment {
-  id          String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
   createdAt   DateTime @default(now())
   title       String
   imageURL    String
-  amenities   String[] @db.Array(String)
+  amenities   String[]
   price       Int
   claimedBy   String?
 }

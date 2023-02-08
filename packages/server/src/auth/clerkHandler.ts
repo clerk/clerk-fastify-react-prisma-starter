@@ -1,13 +1,13 @@
-import { withAuth, WithAuthProp } from "@clerk/clerk-sdk-node";
-import { FastifyRequest } from "fastify";
+import { getAuth } from "@clerk/fastify";
+import { FastifyRequest, FastifyReply } from "fastify";
 
-export function clerkPreHandler() {
-  return withAuth((request: WithAuthProp<FastifyRequest<any>>, reply: any) => {
-    const {sessionId} = request.auth;
-    if (!sessionId) {
-      reply.status(401);
-      reply.end(  { error: "User could not be verified" });
-    }
-  });
+export async function clerkPreHandler(
+  req: FastifyRequest,
+  reply: FastifyReply
+) {
+  const { sessionId } = getAuth(req);
+  if (!sessionId) {
+    reply.status(401);
+    reply.send({ error: "User could not be verified" });
+  }
 }
-

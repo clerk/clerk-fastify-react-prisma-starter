@@ -7,7 +7,7 @@ import { MyApartments } from "./components/MyApartments";
 import { Footer } from "./components/Footer";
 
 // Get the Frontend API from the environment
-const publishableKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
+const publishableKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY || "";
 
 function App() {
   const navigate = useNavigate();
