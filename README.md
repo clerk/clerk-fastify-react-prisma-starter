@@ -1,18 +1,22 @@
 # Clerk Fastify React Prisma Starter
 
-<img src="./docs/cfrp.png" />
+<p align="center">
+  <a href="https://clerk.dev?utm_source=github&utm_medium=clerk_javascript" target="_blank" rel="noopener noreferrer">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://images.clerk.dev/static/logo-dark-mode-400x400.png">
+      <img src="https://images.clerk.dev/static/logo-light-mode-400x400.png" height="64">
+    </picture>
+  </a>
+  <br />
+</p>
 
 This repo shows an example use case for how you setup a fullstack monorepo starter with [Clerk](https://clerk.dev?utm_source=github&utm_medium=starters&utm_campaign=cfrp), Fastify, React and Prisma to achieve authenticated cross-domain user access.
-
-[![Open in VS Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/clerkinc/clerk-fastify-react-prisma-starter)
 
 # Clerk Apartments Application
 
 ## The application
 
-The **Clerk Apartments** application allows a user to claim apartments from the gallery and view them in his own collection. Any apartment that is "claimed" by a user, cannot be reclaimed unless "foregone" by the previous holder. So, be quick 😁
-
-<img src="./docs/show.png" />
+The **Clerk Apartments** application allows a user to claim apartments from the gallery and view them in his own collection. Any apartment that is "claimed" by a user, cannot be reclaimed unless "foregone" by the previous holder.
 
 ## Under the hood
 
